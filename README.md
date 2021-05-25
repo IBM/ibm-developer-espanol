@@ -1,81 +1,49 @@
-<!-- This should be the location of the title of the repository, normally the short name -->
-# repo-template
+# IBM Developer en Español
 
-<!-- Build Status, is a great thing to have at the top of your repository, it shows that you take your CI/CD as first class citizens -->
-<!-- [![Build Status](https://travis-ci.org/jjasghar/ibm-cloud-cli.svg?branch=master)](https://travis-ci.org/jjasghar/ibm-cloud-cli) -->
+![IBM Developer Logo](/images/ibm_developer_logotype.png)
 
-<!-- Not always needed, but a scope helps the user understand in a short sentance like below, why this repo exists -->
-## Scope
+¡Bienvenid@ al repositorio de IBM Developer en Español!
 
-The purpose of this project is to provide a template for new open source repositories.
+Aquí podrás encontrar una extensa biblioteca de recursos que te ayudarán a desarrollar competencias técnicas, permitiéndote aplicarlas en una infinidad de industrias. Además, tendrás la oportunidad de conocer una amplia gama de tecnologías incluyendo Contenedores, Blockchain, IoT, Ciencia de Datos, Inteligencia Artificial, y mucho más. 
 
-<!-- A more detailed Usage or detailed explaination of the repository here -->
-## Usage
+Todos estos contenidos han sido provistos por expertos de IBM, que estarán aquí para apoyarte en cada paso del camino y a quienes podrás contactar en caso de dudas. Además, podrás conectar con una comunidad global de desarrolladores.
 
-This repository contains some example best practices for open source repositories:
+¿Qué crearás en este extenso mundo de posibilidades? La decisión es tuya.
 
-* [LICENSE](LICENSE)
-* [README.md](README.md)
-* [CONTRIBUTING.md](CONTRIBUTING.md)
-* [MAINTAINERS.md](MAINTAINERS.md)
-<!-- A Changelog allows you to track major changes and things that happen, https://github.com/github-changelog-generator/github-changelog-generator can help automate the process -->
-* [CHANGELOG.md](CHANGELOG.md)
+## Contenidos
 
-> These are optional
+- [**Bases de datos**](contenido/bases%20de%20datos/README.md)
+  - Coming Soon!
+- [**Ciencia de Datos**](contenido/ciencia%20de%20datos/README.md)
+  - [Análisis de Datos](contenido/ciencia%20de%20datos/análisis%20de%20datos/README.md)
+- [**Contenedores**](contenido/contenedores/README.md)
+  - [Kubernetes](contenido/contenedores/Kubernetes/README.md)
+  - [Red Hat OpenShift](contenido/contenedores/Red%20Hat%20OpenShift/README.md)
+- [**Desarrollo Web**](contenido/desarollo%20web/README.md)
+  - Coming Soong!
+- [**Desarrollo Mobile**](contenido/desarollo%20mobile/README.md)
+  - Coming Soong!
+- [**Inteligencia Artificial**](contenido/inteligencia%20artificial/README.md)
+  - [Conversaciones & Chatbots](contenido/inteligencia%20artificial/Conversaciones%20&%20Chatbots/README.md)
+  - [Machine Learning](contenido/inteligencia%20artificial/Machine%20Learning/README.md)
+  - [Procesamiento de Lenguaje Natural](contenido/inteligencia%20artificial/Procesamiento%20de%20Lenguaje%20Natural%20(NLP)/README.md)
+  - [Reconocimiento de imágenes](contenido/inteligencia%20artificial/Reconocimiento%20de%20Imágenes/README.md)
 
-<!-- The following are OPTIONAL, but strongly suggested to have in your repository. -->
-* [dco.yml](.github/dco.yml) - This enables DCO bot for you, please take a look https://github.com/probot/dco for more details.
-* [travis.yml](.travis.yml) - This is a example `.travis.yml`, please take a look https://docs.travis-ci.com/user/tutorial/ for more details.
+## Enlaces de Interés
 
-These may be copied into a new or existing project to make it easier for developers not on a project team to collaborate.
+¿Has quedado con ganas de más? ¡Genial! A continuación, te brindamos algunos canales y recursos que te serán de utilidad:
 
-<!-- A notes section is useful for anything that isn't covered in the Usage or Scope. Like what we have below. -->
-## Notes
+- Primero, nos gustaría invitarte a visitar el [sitio de IBM Developer en Español](https://developer.ibm.com/es/), donde encontrarás una gran variedad de artículos, blogs, tutoriales, y mucho más. Todos ellos en Español.
+- Además, te recomendamos subscribirte al [newsletter de Developers en Español](http://ibm.biz/registronewsletter), para estar al tanto de todas las novedades.
+- Si quieres formar parte de una comunidad de desarolladores de habla hispana, únete a nuestro [Discord de Developers en Español](https://discord.gg/yBs8YSnx9m). Aquí podrás compartir tus experiencias, pensamientos y dudas sobre el mundo del desarrollo, así como conocer personas con tus mismos intereses. ¡Invita a tus amigos desarrolladores!
+- Finalmente, si eres un amante de la música, te invitamos a dejarnos algunas de tus canciones favoritas en nuestra [playlist de Spotify](https://open.spotify.com/playlist/2PrxGrcA8MT6K8GLUhvI5R?si=6872d030d5eb4534)
 
-**NOTE: While this boilerplate project uses the Apache 2.0 license, when
-establishing a new repo using this template, please use the
-license that was approved for your project.**
+## Contribuidores
 
-**NOTE: This repository has been configured with the [DCO bot](https://github.com/probot/dco).
-When you set up a new repository that uses the Apache license, you should
-use the DCO to manage contributions. The DCO bot will help enforce that.
-Please contact one of the IBM GH Org stewards.**
+**[TO-DO: información de contacto]**
 
-<!-- Questions can be useful but optional, this gives you a place to say, "This is how to contact this project maintainers or create PRs -->
-If you have any questions or issues you can create a new [issue here][issues].
+- Gabriela Retamosa
+- Bruno Vicario
+- Josefina R. Casanova
 
-Pull requests are very welcome! Make sure your patches are well tested.
-Ideally create a topic branch for every separate change you make. For
-example:
-
-1. Fork the repo
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
-
-<!-- License and Authors is optional here, but gives you the ability to highlight who is involed in the project -->
-## License & Authors
-
-If you would like to see the detailed LICENSE click [here](LICENSE).
-
-- Author: New OpenSource IBMer <new-opensource-ibmer@ibm.com>
-
-```text
-Copyright:: 2019- IBM, Inc
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-```
-
-
-[issues]: https://github.com/IBM/repo-template/issues/new
+Para más información sobre cómo contribuir a este repositorio, dirígete a [la sección de contribuciones](docs/CONTRIBUITING.md).
