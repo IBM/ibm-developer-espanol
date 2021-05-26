@@ -34,8 +34,8 @@ Todos estos contenidos han sido provistos por expertos de IBM, que estarán aqu�
 ¿Has quedado con ganas de más? ¡Genial! A continuación, te brindamos algunos canales y recursos que te serán de utilidad:
 
 - Primero, nos gustaría invitarte a visitar el [sitio de IBM Developer en Español](https://developer.ibm.com/es/), donde encontrarás una gran variedad de artículos, blogs, tutoriales, y mucho más. Todos ellos en Español.
-- Además, te recomendamos subscribirte al [newsletter de Developers en Español](http://ibm.biz/registronewsletter), para estar al tanto de todas las novedades.
-- Si quieres formar parte de una comunidad de desarolladores de habla hispana, únete a nuestro [Discord de Developers en Español](https://discord.gg/yBs8YSnx9m). Aquí podrás compartir tus experiencias, pensamientos y dudas sobre el mundo del desarrollo, así como conocer personas con tus mismos intereses. ¡Invita a tus amigos desarrolladores!
+- Además, te recomendamos subscribirte al [newsletter de IBM Developer en Español](http://ibm.biz/registronewsletter), para estar al tanto de todas las novedades.
+- Si quieres formar parte de una comunidad de desarolladores de habla hispana, únete a nuestro [Discord de IBM Developer en Español](https://discord.gg/yBs8YSnx9m). Aquí podrás compartir tus experiencias, pensamientos y dudas sobre el mundo del desarrollo, así como conocer personas con tus mismos intereses. ¡Invita a tus amigos desarrolladores!
 - Finalmente, si eres un amante de la música, te invitamos a dejarnos algunas de tus canciones favoritas en nuestra [playlist de Spotify](https://open.spotify.com/playlist/2PrxGrcA8MT6K8GLUhvI5R?si=6872d030d5eb4534)
 
 ## Contribuidores
