@@ -16,14 +16,14 @@ Todos estos contenidos han sido provistos por expertos de IBM, que estarán aqu�
   - Coming Soon!
 - [**Ciencia de Datos**](contenido/ciencia%20de%20datos/README.md)
   - [Análisis de Datos](contenido/ciencia%20de%20datos/análisis%20de%20datos/README.md)
-- [**Contenedores**](contenido/contenedores/README.md)
+- **Contenedores**
   - [Kubernetes](contenido/contenedores/Kubernetes/README.md)
   - [Red Hat OpenShift](contenido/contenedores/Red%20Hat%20OpenShift/README.md)
 - [**Desarrollo Web**](contenido/desarollo%20web/README.md)
   - Coming Soong!
 - [**Desarrollo Mobile**](contenido/desarollo%20mobile/README.md)
   - Coming Soong!
-- [**Inteligencia Artificial**](contenido/inteligencia%20artificial/README.md)
+- **Inteligencia Artificial**
   - [Conversaciones & Chatbots](contenido/inteligencia%20artificial/Conversaciones%20&%20Chatbots/README.md)
   - [Machine Learning](contenido/inteligencia%20artificial/Machine%20Learning/README.md)
   - [Procesamiento de Lenguaje Natural](contenido/inteligencia%20artificial/Procesamiento%20de%20Lenguaje%20Natural%20(NLP)/README.md)
@@ -33,17 +33,22 @@ Todos estos contenidos han sido provistos por expertos de IBM, que estarán aqu�
 
 ¿Has quedado con ganas de más? ¡Genial! A continuación, te brindamos algunos canales y recursos que te serán de utilidad:
 
-- Primero, nos gustaría invitarte a visitar el [sitio de IBM Developer en Español](https://developer.ibm.com/es/), donde encontrarás una gran variedad de artículos, blogs, tutoriales, y mucho más. Todos ellos en Español.
-- Además, te recomendamos subscribirte al [newsletter de IBM Developer en Español](http://ibm.biz/registronewsletter), para estar al tanto de todas las novedades.
-- Si quieres formar parte de una comunidad de desarolladores de habla hispana, únete a nuestro [Discord de IBM Developer en Español](https://discord.gg/yBs8YSnx9m). Aquí podrás compartir tus experiencias, pensamientos y dudas sobre el mundo del desarrollo, así como conocer personas con tus mismos intereses. ¡Invita a tus amigos desarrolladores!
-- Finalmente, si eres un amante de la música, te invitamos a dejarnos algunas de tus canciones favoritas en nuestra [playlist de Spotify](https://open.spotify.com/playlist/2PrxGrcA8MT6K8GLUhvI5R?si=6872d030d5eb4534)
+- ![IBM Icon](./images/eyebeem_logo_white_small.png) **Visita nuestra web:** primero, nos gustaría invitarte a visitar el [sitio de IBM Developer en Español](https://developer.ibm.com/es/), donde encontrarás una gran variedad de artículos, blogs, tutoriales, y mucho más. Todos ellos en Español.
+
+- ![IBM Icon](./images/icon_ibm_small.png) **¡No te pierdas nada!** te recomendamos subscribirte al [newsletter de IBM Developer en Español](http://ibm.biz/registronewsletter), para estar al tanto de todas las novedades.
+  
+- ![Discord Icon](./images/icon_discord_small.png) **Conversemos en Discord:** si quieres formar parte de una comunidad de desarolladores de habla hispana, únete a nuestro [Discord de IBM Developer en Español](https://discord.gg/yBs8YSnx9m). Aquí podrás compartir tus experiencias, pensamientos y dudas sobre el mundo del desarrollo, así como conocer personas con tus mismos intereses. ¡Invita a tus amigos desarrolladores!
+  
+- ![Spotify Icon](./images/icon_spotify_small.png) **Nuestra Playlist:** finalmente, si eres un amante de la música, te invitamos a dejarnos algunas de tus canciones favoritas en nuestra [playlist de Spotify](https://open.spotify.com/playlist/2PrxGrcA8MT6K8GLUhvI5R?si=6872d030d5eb4534).
 
 ## Contribuidores
 
-**[TO-DO: información de contacto]**
-
-- Gabriela Retamosa
-- Bruno Vicario
-- Josefina R. Casanova
+- ``Gabriela Retamosa``
+  - ![Twitter Icon](images/icon_twitter_small.png) [@gabyret](https://twitter.com/gabyret)
+  - ![LinkedIn Icon](images/icon_linkedin_small.png) [/gabriela-retamosa-saint-martin](https://www.linkedin.com/in/gabriela-retamosa-saint-martin/)
+- ``Bruno Vicario``
+  - ![LinkedIn Icon](images/icon_linkedin_small.png) [/bruno-vicario-823517211](https://www.linkedin.com/in/bruno-vicario-823517211/)
+- ``Josefina R. Casanova``
+  - ![LinkedIn Icon](images/icon_linkedin_small.png) [/josefinarcasanova](https://www.linkedin.com/in/josefinarcasanova/)
 
 Para más información sobre cómo contribuir a este repositorio, dirígete a [la sección de contribuciones](docs/CONTRIBUITING.md).
