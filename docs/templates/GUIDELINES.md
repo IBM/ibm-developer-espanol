@@ -41,7 +41,7 @@ En caso de contar con archivos otros archivos además del `README.md`, se insta 
 - `directorio_raíz_del_code_pattern`
   - `assets`: archivos auxiliares al Code Pattern que no estén contemplados en las demás carpetas. Por ejemplo: un archivo .csv para utilizar como dataset en el entrenamiento de un modelo de Watson AutoAI.
   - `images`: imágenes a utilizar en todo el Code pattern
-  - `scripts`: carpeta donde se encontrarán los scripts de código. La estructura interna dependerá del code pattern: puede ser un único script, o una estructura diferente.
+  - `source`: carpeta donde se encontrará el código. La estructura interna dependerá del code pattern: puede ser un único script, o una estructura diferente.
 
 El archivo `README.md` deberá colocarse en el directorio raíz del Code Pattern.
 
