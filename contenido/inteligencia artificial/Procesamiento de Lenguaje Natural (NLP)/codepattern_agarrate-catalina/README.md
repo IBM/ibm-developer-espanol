@@ -78,7 +78,7 @@ Antes de ponerte manos a la obra, debes obtener las credenciales de tu instancia
 
 Dirígete a tu instancia de Watson Speech-To-Text y en la sección de "Service Credentials" haz click en el botón de copia:
 
-[Obtención de credenciales](./images/ObtencionCredenciales.PNG)
+![Obtención de credenciales](./images/ObtencionCredenciales.PNG)
 
 Luego habrás de cambiar en tu código la definición de la constante `service_credentials` para que tome el valor de credenciales que acabas de copiar. Debería de lucir así:
 
@@ -114,7 +114,7 @@ Para más información se recomienda consultar la [documentación oficial de la 
 
 Un corpus es un archivo de texto plano que contiene enunciados involucrando las palabras específicas que deseamos enseñarle a nuestro modelo. El servicio construirá un vocabulario extrayendo los términos que no existen en su vocabulario base. Es posible, e incluso recomendable, añadir más de un archivo al modelo personalizado.
 
-Para este Code Pattern utilizaremos [el siguiente corpus](./corpus/corpus)), y un [archivo de audio](./audios/audiodeprueba.mp3), elaborados exclusivamente para este tutorial. El audio es una lectura de un fragmento del cuento "Nuestro primer cigarro", del autor uruguayo Horacio Quiroga.
+Para este Code Pattern utilizaremos [el siguiente corpus](../codepattern_agarrate-catalina/assets/corpus/corpus)), y un [archivo de audio](../codepattern_agarrate-catalina/assets/audios/audiodeprueba.mp3), elaborados exclusivamente para este tutorial. El audio es una lectura de un fragmento del cuento "Nuestro primer cigarro", del autor uruguayo Horacio Quiroga.
 
 Habrás de descargar ambos, si es que no lo has hecho, y colocarlos en los siguientes directorios:
 
@@ -252,7 +252,7 @@ Una vez más, la respuesta que recibirás al finalizar será una vacía `{}`.
 
 Finalmente, la hora de la verdad: la de consulta del modelo.
 
-Con el fin de comprobar cuánto a aprendido Watson, utilizarás el mismo [archivo de audio cuya transcripción utilizaste para entrenar](./audios/audiodeprueba.mp3), y realizarás dos consultas:
+Con el fin de comprobar cuánto a aprendido Watson, utilizarás el mismo [archivo de audio cuya transcripción utilizaste para entrenar](../codepattern_agarrate-catalina/assets/audios/audiodeprueba.mp3), y realizarás dos consultas:
 
 1. Una con el modelo personalizado que acabas de crear
 2. Otra con el modelo estándar que ofrece el servicio
@@ -347,9 +347,9 @@ function printTranscriptComparison(defaultTranscript, customTranscript) {
 }
 ```
 
-Al final de la ejecución del [script completo](./codePattern.js), deberías obtener una respuesta como esta:
+Al final de la ejecución del [script completo](./source/codePattern.js), deberías obtener una respuesta como esta:
 
-[Comparación de Transcripciones](./images/ComparacionModelos.PNG)
+![Comparación de Transcripciones](./images/ComparacionModelos.PNG)
 
 Aquí es posible ver varios cambios, entre ellos:
 
@@ -357,7 +357,7 @@ Aquí es posible ver varios cambios, entre ellos:
 - El modelo personalizado detectó la palabra "que", omitida por el modelo estándar. Esto es también correcto, y una mejora respecto al modelo estándar.
 - La palabra "china" es ahora "llenando". Una vez más, esto es correcto.
 
-Para verificar la precisión de estas transcripciones respecto al audio original es recomendable consultar la [transcripción del audio de prueba](./transcriptions/audiodepruebaTranscript).
+Para verificar la precisión de estas transcripciones respecto al audio original es recomendable consultar la [transcripción del audio de prueba](../codepattern_agarrate-catalina/assets/transcriptions/audiodepruebaTranscript).
 
 ## Resumen
 
