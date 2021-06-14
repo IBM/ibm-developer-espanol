@@ -162,7 +162,7 @@ Elegir un nombre para la nueva instancia y clickear en crear.
 Con las 2 instancias necesarias ya creadas, clickear en Iniciación para iniciar el servicio de Watson Studio. 
 
 <p align="center">
-  <img src="Images/WatsonStudioLaunch.jpeg" width="100%">
+  <img src="images/WatsonStudioLaunch.jpeg" width="100%">
 </p>
 
 ## Crear proyecto de Watson Studio
@@ -188,23 +188,23 @@ En el paso actual, debemos nombrar al proyecto, además de proveer una descripci
 
 En este momento, estamos en la vista general del proyecto. Lo siguiente que debemos hacer es añadir un Notebook a este, y lo haremos de la siguiente forma. Se debe seleccionar “Añadir al proyecto”.
 <p align="center">
-  <img src="Images/WatsonStudioProject.jpeg" width="100%">
+  <img src="images/WatsonStudioProject.jpeg" width="100%">
 </p>
 
 En el modal que contiene los tipos de activo, debemos elegir el que dice Notebook.
 <p align="center">
-  <img src="Images/ActiveTypes.jpeg" width="100%">
+  <img src="images/ActiveTypes.jpeg" width="100%">
 </p>
 
 Como nuestra intención es cargar un notebook desde un archivo .ipynb existente, hay que elegir la opción “Desde el archivo”. Luego, nombrar y dar una descripción al notebook. A continuación, seleccionar el entorno de ejecución de Python 3.7 que posee 4 vCPU y 16 GB de ram. Si se tiene un plan pago, se puede escoger un entorno con GPU para que los entrenamientos sean más veloces, pero no es necesario para este code pattern. Por último, arrastrar el archivo .ipynb presente en la carpeta raíz del repositorio github hacia la ventana del navegador.
 
 <p align="center">
-  <img src="Images/NotebookEnvironment.jpeg" width="100%">
+  <img src="images/NotebookEnvironment.jpeg" width="100%">
 </p>
 Para poder editar y correr el notebook, se debe presionar en el lápiz que está en la parte superior centro de la pantalla.
 
 <p align="center">
-  <img src="Images/NotebookCode.jpeg" width="100%">
+  <img src="images/NotebookCode.jpeg" width="100%">
 </p>
 
 
@@ -215,29 +215,29 @@ Previo a correr el código crearemos nuestro servicio de Watson Machine learning
 Por esta razón , en un nueva pestaña, ir al catálogo de IBM Cloud y buscar Machine Learning.
 
 <p align="center">
-  <img src="Images/CatalogoMachineLearning.jpeg" width="100%">
+  <img src="images/CatalogoMachineLearning.jpeg" width="100%">
 </p>
 
 Seleccionar la ubicación Dallas y el plan Lite
 
 <p align="center">
-  <img src="Images/MachineLearningLocation.jpeg" width="100%">
+  <img src="images/MachineLearningLocation.jpeg" width="100%">
 </p>
 
 Elegir un nombre y hacer click en crear
 <p align="center">
-  <img src="Images/MachineLearningCreate.jpeg" width="100%">
+  <img src="images/MachineLearningCreate.jpeg" width="100%">
 </p>
 
 Lo siguiente que debemos hacer es crear un espacio de despliegue. Para ello regresamos a la [página principal de IBM Cloud Pak for Data](https://dataplatform.cloud.ibm.com/home2?context=cpdaas) y vamos a la sección de **Despliegues** en la parte inferior izquierda de la imagen.
 
 <p align="center">
-  <img src="Images/CloudPackDespliegues.jpeg" width="100%">
+  <img src="images/CloudPackDespliegues.jpeg" width="100%">
 </p>
 
 En esta página haremos click sobre el botón de Crear nuevo espacio de despliegue
 <p align="center">
-  <img src="Images/NuevoEspacioDespliegue.jpeg" width="100%">
+  <img src="images/NuevoEspacioDespliegue.jpeg" width="100%">
 </p>
 
 Aquí configuraremos los datos de nuestro espacio, en este caso solo basta con cambiar el nombre y seleccionar el servicio de Watson Machine Learning que recién creamos. Al tener todo listo hacemos click en Crear.
@@ -246,38 +246,38 @@ Aquí configuraremos los datos de nuestro espacio, en este caso solo basta con c
 Luego de creado nuestro espacio de despliegue, es momento de comenzar a editar el código. Para ello, navegar hacia la sección Activos dentro del proyecto. Para llegar al proyecto, se puede navegar hacia la [página principal de IBM Cloud Pak for Data](https://dataplatform.cloud.ibm.com/home2?context=cpdaas), y luego seleccionar el proyecto creado.
 
 <p align="center">
-  <img src="Images/ActivosProyecto.jpg" width="100%">
+  <img src="images/ActivosProyecto.jpg" width="100%">
 </p>
 
 Hacer click sobre el Notebook llamado **ClassificationNotebook**. Para poder editar el Notebook, debemos clickear en el lápiz que se muestra en la siguiente imagen.
 
 <p align="center">
-  <img src="Images/LapizNotebook.jpg" width="100%">
+  <img src="images/LapizNotebook.jpg" width="100%">
 </p>
 
 En la primera celda, tendremos que configurar las variables de nuestra instancia de Watson Machine Learning. Aquí necesitaremos una API Key de IBM Cloud y la ubicación de nuestra instancia de Watson Machine Learning
 
 <p align="center">
-  <img src="Images/WMLCredentials.jpg" width="100%">
+  <img src="images/WMLCredentials.jpg" width="100%">
 </p>
 
 Para crear una API Key de IBM Cloud, debemos navegar hacia la [página principal de IBM Cloud](cloud.ibm.com), clickear en Gestionar y elegir Acceso (IAM)
 
 <p align="center">
-  <img src="Images/AccesoIAM.jpg" width="100%">
+  <img src="images/AccesoIAM.jpg" width="100%">
 </p>
 
 Luego se debe seleccioanr **Claves de Api** en la barra de navegación de la izquierda, donde nos aparecerá la opción de **Crear una clave de API de IBM Cloud**. Elegir dicha opción.
 
 <p align="center">
-  <img src="Images/ClavesApi.jpg" width="100%">
+  <img src="images/ClavesApi.jpg" width="100%">
 </p>
 
 Cuando ya se tenga la clave, igualar la variable api_key al valor de la clave. Para la variable location, ingresar us-south si es que eligieron la región de Dallas para el servicio de Machine learning. Si eligieron otra ubicación, se pueden fijar en la [documentación de Watson Machine Learning](https://cloud.ibm.com/apidocs/machine-learning#endpoint-url) para ver los endpoints de las distintas regiones.
 
 El último paso de configuración que se debe hacer es obtener el id del espacio de despliegue que creamos anteriormente. Para ello, debemos navegar hacia nuestro [espacio de despliegue](https://dataplatform.cloud.ibm.com/ml-runtime/spaces?context=cpdaas) y vamos a la sección Administrar (Manage).
 <p align="center">
-  <img src="Images/EspacioDespliegue.jpg" width="100%">
+  <img src="images/EspacioDespliegue.jpg" width="100%">
 </p>
 
 Copiamos el valor bajo Space GUID y lo pegamos en el Notebook en la variable space_id.
@@ -286,7 +286,7 @@ Copiamos el valor bajo Space GUID y lo pegamos en el Notebook en la variable spa
 Para correr el código, podemos correr las celdas secuencialmente una a una o podemos decidir correrlas todas, una a continuación de otra. Para la última opción podemos ir a **Cell -> Run All**
 
 <p align="center">
-  <img src="Images/RunAll.jpg" width="100%">
+  <img src="images/RunAll.jpg" width="100%">
 </p>
 
 Mientras que van corriendo las celdas, recomiendo al lector que lea los comentarios de las mismas así como las operaciones que se hacen. De este modo, uno se familiarizará con las librerías Keras y Tensorflow que lo ayudarán a crear modelos más complejos en un futuro.
@@ -294,11 +294,11 @@ Mientras que van corriendo las celdas, recomiendo al lector que lea los comentar
 Cuando el código se termina de ejecutar, podemos volver al [espacio de despliegue que creamos](https://dataplatform.cloud.ibm.com/ml-runtime/spaces?context=cpdaas)
 
 <p align="center">
-  <img src="Images/DespliegueModelo.jpg" width="100%">
+  <img src="images/DespliegueModelo.jpg" width="100%">
 </p>
 Si entramos al deployment, podremos ver fragmentos de código en distintos lenguajes que muestran cómo invocar a nuestra api.
 <p align="center">
-  <img src="Images/DeploymentAPI.jpg" width="100%">
+  <img src="images/DeploymentAPI.jpg" width="100%">
 </p>
 
 ## Resumen
