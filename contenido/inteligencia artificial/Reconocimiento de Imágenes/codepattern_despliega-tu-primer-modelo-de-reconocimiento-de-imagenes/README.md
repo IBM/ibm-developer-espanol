@@ -54,7 +54,7 @@ La idea detrás de esto es que, por ejemplo, en una imagen de un vehículo rojo,
  En la imagen a continuación se puede visualizar la transformación que haría una capa de max pooling de 2x2. Esta reduce las dimensiones de la imagen a la mitad, tomando los valores máximos de cada sección de la misma. Para el agrupamiento utilizado, la imagen se dividirá en 4 secciones, siendo la primera la que contiene a los pixeles con valores 17, 9, 6 y 20.
 
 <p align="center">
-  <img src="Images/pooling.jpg" width="100%">
+  <img src="images/pooling.jpg" width="100%">
 </p>
 
 Al final de la red, se ubican un par de capas completamente conectadas, las cuales contienen neuronas interconectadas que se encargarán de la clasificación, produciendo probabilidades de 0 a 1 para cada imagen que queramos clasificar. La última capa completamente conectada es la responsable de mapear las probabilidades de la capa anterior para decidir si ese conjunto de probabilidades indica que el tipo de objeto que quiero clasificar se encuentra en la imagen.
