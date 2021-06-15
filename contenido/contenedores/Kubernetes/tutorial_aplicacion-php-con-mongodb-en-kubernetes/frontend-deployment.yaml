@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  labels:
+    name: guestbook
+    component: frontend
+spec:
+  selector:
+    matchLabels:
+      name: guestbook
+      component: frontend
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        name: guestbook
+        component: frontend
+    spec:
+      containers:
+      - name: guestbook
+        image: marcelorum/gb-frontend:v5
+        # image: gcr.io/google-samples/gb-frontend:v5
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        env:
+        - name: GET_HOSTS_FROM
+          value: dns
+        ports:
+        - containerPort: 80
