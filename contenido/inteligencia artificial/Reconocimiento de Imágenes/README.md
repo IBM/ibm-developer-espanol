@@ -8,10 +8,14 @@ El reconocimiento de imágenes, en el contexto de la visión artificial, es la c
 
 El reconocimiento de imágenes se utiliza para realizar una gran cantidad de tareas visuales basadas en máquinas, como etiquetar el contenido de las imágenes con meta-etiquetas, realizar búsquedas de contenido de imágenes y guiar robots o vehículos autónomos y sistemas para evitar accidentes.
 
-# Índice
+## Índice
 
 - [Despliega tu primer modelo de reconocimiento de imágenes en la nube](./codepattern_despliega-tu-primer-modelo-de-reconocimiento-de-imagenes/README.md)
 
-# Contribuciones
+## Contribuciones
 
-Para más información sobre cómo contribuir a este repositorio, dirígete a [la sección de contribuciones](docs/CONTRIBUITING.md).
+Para más información sobre cómo contribuir a este repositorio, dirígete a [la sección de contribuciones](../../../docs/CONTRIBUITING.md).
+
+## Navegación
+
+- [↗ Volver al Índice](../../../README.md)

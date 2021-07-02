@@ -6,6 +6,14 @@ En esta sección podrás encontrar todo el contenido relacionado a Análisis de 
 
 El análisis de datos es la ciencia de analizar datos sin procesar para sacar conclusiones sobre esa información. Muchas de las técnicas y procesos de análisis de datos se han automatizado en procesos mecánicos y algoritmos que funcionan sobre datos sin procesar para el consumo humano.
 
-# Índice
+## Índice
 
 - [Coming Soon!]()
+
+## Contribuciones
+
+Para más información sobre cómo contribuir a este repositorio, dirígete a [la sección de contribuciones](../../../docs/CONTRIBUITING.md).
+
+## Navegación
+
+- [↗ Volver al Índice](../../../README.md)

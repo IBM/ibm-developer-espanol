@@ -10,10 +10,14 @@ El aprendizaje automático es un componente importante de la ciencia de datos. A
 
 Para más información recomendamos leer [este artículo introductorio](https://www.ibm.com/cloud/learn/machine-learning) (en inglés).
 
-# Índice
+## Índice
 
 - [En Construcción...](./carpeta_nueva)
 
-# Contribuciones
+## Contribuciones
 
-Para más información sobre cómo contribuir a este repositorio, dirígete a [la sección de contribuciones](docs/CONTRIBUITING.md).
+Para más información sobre cómo contribuir a este repositorio, dirígete a [la sección de contribuciones](../../../docs/CONTRIBUITING.md).
+
+## Navegación
+
+- [↗ Volver al Índice](../../../README.md)

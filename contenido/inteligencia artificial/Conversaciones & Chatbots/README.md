@@ -8,10 +8,14 @@ Un chatbot es un sistema capaz de comunicarse con humanos mediante lenguaje natu
 
 Para más información recomendamos visitar [este artículo](https://www.ibm.com/cloud/learn/chatbots-explained) (en inglés).
 
-# Índice
+## Índice
 
 - [Crea un Chatbot Inteligente en Discord usando APIs de Watson AI](./code_pattern-crea-un-chatbot-inteligente-en-discord/README.md)
 
-# Contribuciones
+## Contribuciones
 
-Para más información sobre cómo contribuir a este repositorio, dirígete a [la sección de contribuciones](docs/CONTRIBUITING.md).
+Para más información sobre cómo contribuir a este repositorio, dirígete a [la sección de contribuciones](../../../docs/CONTRIBUITING.md).
+
+## Navegación
+
+- [↗ Volver al Índice](../../../README.md)

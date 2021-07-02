@@ -8,10 +8,14 @@ El procesamiento del lenguaje natural (NLP) es el análisis sintáctico y la int
 
 Para más información recomendamos leer [este artículo introductorio](https://www.ibm.com/blogs/watson/2019/10/how-to-get-started-with-natural-language-processing/) (en inglés).
 
-# Índice
+## Índice
 
 - [¡Agarrate Catalina! Enséñale términos personalizados a Watson Speech-To-Text](./codepattern_agarrate-catalina)
 
-# Contribuciones
+## Contribuciones
 
-Para más información sobre cómo contribuir a este repositorio, dirígete a [la sección de contribuciones](docs/CONTRIBUITING.md).
+Para más información sobre cómo contribuir a este repositorio, dirígete a [la sección de contribuciones](../../../docs/CONTRIBUITING.md).
+
+## Navegación
+
+- [↗ Volver al Índice](../../../README.md)
