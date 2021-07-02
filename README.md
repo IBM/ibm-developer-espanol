@@ -14,7 +14,7 @@ Todos estos contenidos han sido provistos por expertos de IBM, que estarán aqu�
 
 - [**Bases de datos**](contenido/bases%20de%20datos/README.md)
   - Coming Soon!
-- [**Ciencia de Datos**](contenido/ciencia%20de%20datos/README.md)
+- **Ciencia de Datos**
   - [Análisis de Datos](contenido/ciencia%20de%20datos/análisis%20de%20datos/README.md)
 - **Contenedores**
   - [Kubernetes](contenido/contenedores/Kubernetes/README.md)

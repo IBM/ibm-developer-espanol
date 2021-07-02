@@ -8,10 +8,7 @@ Red Hat OpenShift es una plataforma de aplicaciones de contenedores de código a
 
 # Índice de Contenidos
 
-- **Tutoriales**
-  - [Coming Soon!]()
-- **Code Patterns**
-  - [Coming Soon!]()
+- [Coming Soon!]()
 
 # Contribuciones
 

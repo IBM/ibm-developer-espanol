@@ -1,13 +1,16 @@
 # Crea un Chatbot Inteligente en Discord usando APIs de Watson AI
-[![NPM](https://nodei.co/npm/discord.js.png?compact=true)](https://nodei.co/npm/discord.js/)
+
 ![ibm watson version](https://img.shields.io/badge/ibm--watson-6.0.3-blue)
 ![discord.js version](https://img.shields.io/badge/discord.js-12.5.3v-green)
 ![dotenv version](https://img.shields.io/badge/dotenv-6.2.0v-yellow)
 
+[![NPM](https://nodei.co/npm/discord.js.png?compact=true)](https://nodei.co/npm/discord.js/)
+
 ## Resumen
+
 En este Code Pattern aprenderás lo sencillo que es integrar diferentes capacidades inteligentes provistas de AI/Machine Learning al construir un chatbot poderoso para usarlo en la plataforma de mensajería y llamadas de Discord, colocándolo en un servidor para clientes y colegas, todo esto mediante la programación sencilla en Node.js. Este chatbot es una muestra de como integrar diferentes recursos de Watson para obtener respuestas inteligentes a diferentes incógnitas.
 
-## Tecnologias
+## Tecnologías
 
 - [Discord.js](https://discord.js.org/#/docs/main/stable/general/welcome)
 - [Node.js](https://nodejs.org/en/docs/guides/getting-started-guide/)
@@ -18,6 +21,7 @@ En este Code Pattern aprenderás lo sencillo que es integrar diferentes capacida
 Tiempo estimado: 30 a 45 minutos.
 
 ### Prerequisitos
+
 - Contar con una cuenta de [IBM Cloud](https://cloud.ibm.com/), el plan Lite sirve para este Code Pattern.
 - Contar con una cuenta registrada en la plataforma de [Discord](https://discord.com/), se recomienda tener el programa o la aplicación instalada para más rapida ejecución y debug.
 - Contar con [Node.js](https://nodejs.org/en/download/) instalado en tu máquina, ya sea Linux, Windows o Mac.
@@ -139,7 +143,7 @@ cd Discord-Watson-AI-Bot
 ```
 Ya dentro de esta carpeta encontramos todo lo necesario para dar vida al bot, tenemos el archivo "main.js" desde el cual se orquesta las funciones del bot, todo escrito en Node.js, tenemos también la carpeta "commands" en los cuales encontramos los comandos base e iniciales como "ping.js" y los de Watson como "lang_translator.js", "nlu_analyzer_cat.js", "nlu_analyzer_con.js" y "tone_analyzer.js" además de contar con el archivo Dockerfile que permitirá construir una imagen con todo lo necesario para correr nuestro bot, ¡Sin tener que programar nada!
 
-Las funciones inteligentes ya se encuentran programadas, solo debes darle acceso a ellas a través de los servicios que ya tienes creados como se detallan en los **Prerequisitos** de este code pattern, para conectar estos accesos, abre y modifica el archivo ".env_sample" el cual es un template de todos los accesos que necesita el bot, copia todas las API Keys y Service Url de tus recursos de Watson y pegalos, además de copiar y pegar el token de tu bot que se muestra en el paso **1. Registra un nuevo Bot en Discord Developers**, si te queda alguna duda de cómo conseguir estos accesos, ingresa a la documentación en **Tecnologías**.
+Las funciones inteligentes ya se encuentran programadas, solo debes darle acceso a ellas a través de los servicios que ya tienes creados como se detallan en los **Prerequisitos** de este code pattern, para conectar estos accesos, abre y modifica el archivo ".env_sample" el cual es un template de todos los accesos que necesita el bot, copia todas las API Keys y Service Url de tus recursos de Watson y pégalos, además de copiar y pegar el token de tu bot que se muestra en el paso **1. Registra un nuevo Bot en Discord Developers**, si te queda alguna duda de cómo conseguir estos accesos, ingresa a la documentación en **Tecnologías**.
 
 <p align="center">
   <img src="images/foto-env-sample.jpg" width="75%"></img>
@@ -182,7 +186,7 @@ Llegando a esta parte, el bot se encuentra completamente listo para ser usado, p
 
 ¡Prueba a utilizar alguno de esos comandos! Puedo explicarte que el comando **!mood** permite conocer alguna emoción o sentimiento encontrado en una oración o párrafo, el comando **!related** te dará una buena idea sobre de que trata un texto de información o sitio web, sin tener que leerlo por completo, y además el comando **!translate** permitirá traducir tu español, portugués o chino al inglés para así no toparse con la barrera del idioma, existen otros comandos divertidos a probar, prueba con revisar la carpeta de "commands" del proyecto y en el programa "main.js" para encontrar los otros comandos... (pista: prueba con "gato" en inglés), en la carpeta "images" encontrarás el logo de Watson si es lo que deseas poner en tu bot.
 
-Estas son algunas imagenes capturadas desde Discord, ¡Disfruta tu bot!
+Estas son algunas imágenes capturadas desde Discord, ¡Disfruta tu bot!
 
 <img src="images/comando-uno.jpg" width="47%"></img>
 <img src="images/comando-dos.jpg" width="43%"></img>
