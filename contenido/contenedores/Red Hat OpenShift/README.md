@@ -16,4 +16,4 @@ Para más información sobre cómo contribuir a este repositorio, dirígete a [l
 
 ## Navegación
 
-- [↗ Volver al Índice](../../../README.md)
+- [↗ Volver al Inicio](../../../README.md)
