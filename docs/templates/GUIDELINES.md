@@ -10,6 +10,7 @@
     - [Recursos de interés](#recursos-de-interés)
   - [Buenas prácticas](#buenas-prácticas)
   - [Código de Conducta](#código-de-conducta)
+  - [Navegación](#navegación)
 
 ## Qué es un Code Pattern?
 
@@ -63,3 +64,7 @@ IBM Developer se compromete a hacer de este un entorno seguro, respetuoso y cóm
 IBM Developer se reserva el derecho de revisar este código de conducta en cualquier momento. 
 
 Para más información, consultar la [sección correspondiente en W3 Developer **(IBMers Only)**](https://w3.ibm.com/developer/docs/events/code-conduct/).
+
+## Navegación
+
+- [↗ Volver al Inicio](../../README.md)

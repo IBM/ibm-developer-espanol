@@ -15,4 +15,8 @@ En esta sección podrás encontrar todo el contenido relacionado a [Tecnología]
 
 # Contribuciones
 
-Para más información sobre cómo contribuir a este repositorio, dirígete a [la sección de contribuciones](docs/CONTRIBUITING.md).
+Para más información sobre cómo contribuir a este repositorio, dirígete a [la sección de contribuciones](../../docs/CONTRIBUITING.md).
+
+## Navegación
+
+- [↗ Volver al Inicio](../../README.md)
