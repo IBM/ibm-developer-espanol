@@ -12,20 +12,20 @@ Una vez finalizado este Code Pattern, serás capaz de:
 <!--Se ruega crear un sub-directorio "images" y colocar la imagen (llamada arquitectura.png o arquitectura.jpg) allí.-->
 [Diagrama de Arquitectura](./images/arquitectura.png)
 
-# Secuencia
+## Secuencia
 
 * [Paso 1]
 * [Paso 2]
 * [...]
 * [Paso n]
 
-# Mira el video
+## Mira el video
 
 **Nota:** esta sección es OPCIONAL
 
 [Link al video en YouTube](COLOCAR_LINK_AQUÍ)
 
-# Requisitos previos
+## Requisitos previos
 
 **Nota:** por favor brindar links a los recursos (sea un sitio web, otro code pattern, la página de aprovisionamiento de un servicio de IBM Cloud, etc.), y hacerlo de forma embebida [como en este ejemplo](AQUI_SE_COLOCA_EL_LINK)
 
@@ -34,17 +34,17 @@ Una vez finalizado este Code Pattern, serás capaz de:
 * [...]
 * [Requisito n]
 
-# Pasos a seguir
+## Pasos a seguir
 
-## 1. [Paso 1]
+### 1. [Paso 1]
 
-## 2. [Paso 2]
+### 2. [Paso 2]
 
-## X. [.........]
+### X. [.........]
 
-## n. [Paso n]
+### n. [Paso n]
 
-# Problemas frecuentes
+## Problemas frecuentes
 
 **Nota:** esta sección es OPCIONAL, aunque recomendada
 
