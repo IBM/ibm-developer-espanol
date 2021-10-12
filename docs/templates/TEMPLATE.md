@@ -25,6 +25,12 @@ Una vez finalizado este Code Pattern, serás capaz de:
 
 [Link al video en YouTube](COLOCAR_LINK_AQUÍ)
 
+## Marco Teórico
+
+**Nota:** esta sección es OPCIONAL
+
+Conceptos teóricos o prácticos que debe poseer el lector, sean respecto a servicios de IBM Cloud, o a disciplinas/tecnologías relacionadas. Se recomienda referenciar contenidos existentes en IBM Developer (de ser posible en español)
+
 ## Requisitos previos
 
 **Nota:** por favor brindar links a los recursos (sea un sitio web, otro code pattern, la página de aprovisionamiento de un servicio de IBM Cloud, etc.), y hacerlo de forma embebida [como en este ejemplo](AQUI_SE_COLOCA_EL_LINK)
