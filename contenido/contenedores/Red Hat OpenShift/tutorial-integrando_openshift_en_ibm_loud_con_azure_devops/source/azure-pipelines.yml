@@ -1,0 +1,129 @@
+resources:
+  repositories:
+    - repository: templates
+      type: githubenterprise
+      name: <organizacion/repositorio> #remplazar valores
+      endpoint: 'https://github.<organizacion>.com/' #remplazar valores
+
+trigger:
+- master
+
+variables:
+- group: vg-backend #remplazar o crear un variable group con este nombre
+
+stages:
+- stage: Build
+  displayName: Build stage
+  jobs:  
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: ubuntu-20.04
+    steps:
+#Tarea que se encarga de remplazar valores dentro del deployment
+    - task: replacetokens@3
+      inputs:
+        rootDirectory: '$(System.DefaultWorkingDirectory)/manifests'
+        targetFiles: 'deployment.yml'
+        encoding: 'auto'
+        writeBOM: true
+        verbosity: 'detailed'
+        actionOnMissing: 'warn'
+        keepToken: false
+        tokenPrefix: '#{'
+        tokenSuffix: '}#'
+#Tarea encargada de la compilacion de una aplicacion basada en quarkus
+    - task: Maven@3
+      inputs:
+        mavenPomFile: 'pom.xml'
+        options: '-Pnative -Dquarkus.native.container-build=true -Dquarkus.container-image.build=true'
+        publishJUnitResults: true
+        testResultsFiles: '**/surefire-reports/TEST-*.xml'
+        javaHomeOption: 'JDKVersion'
+        mavenVersionOption: 'Default'
+        mavenAuthenticateFeed: false
+        effectivePomSkip: false
+        sonarQubeRunAnalysis: false
+#Tarea que copia el resultado de la compilacion
+    - task: CopyFiles@2
+      inputs:
+        SourceFolder: '$(system.defaultworkingdirectory)'
+        Contents: |
+          **/target/*
+        TargetFolder: '$(build.artifactstagingdirectory)'
+#Tarea que copia los archivos necesarios para el despliegue sin el path de origen
+    - task: CopyFiles@2
+      inputs:
+        SourceFolder: '$(system.defaultworkingdirectory)'
+        Contents: |
+          **/src/main/docker/Dockerfile.native
+          **/manifests/deployment.yml
+        TargetFolder: '$(build.artifactstagingdirectory)'
+        flattenFolders: true
+#Tarea que publica el directorio resultante de las dos copias
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'backend-app'
+        publishLocation: 'Container'
+#Tarea que construye y envia la imagen al ICR
+    - task: Docker@2
+      displayName: Build and push image
+      inputs:
+        containerRegistry: $(dockerRegistryServiceConnection)
+        repository: $(icrnamespace)/$(icrrepository)
+        command: buildAndPush
+        Dockerfile: $(build.artifactstagingdirectory)/Dockerfile.native
+        tags: |
+          $(tag)
+- stage: DeployCanary
+  displayName: Deploy canary
+  dependsOn: Build
+  condition: succeeded()
+  jobs:
+  - deployment: Deploycanary
+    displayName: Deploy canary
+    pool:
+      vmImage: ubuntu-20.04
+    environment: '$(productiveEnvironment)'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - template: kubernetes.yml@templates
+            parameters:
+              action: 'deploy'
+- stage: PromoteRejectCanary
+  displayName: Promote or Reject canary
+  dependsOn: DeployCanary
+  condition: succeeded()
+  jobs:
+  - deployment: PromoteCanary
+    displayName: Promote Canary
+    pool: 
+      vmImage: ubuntu-20.04
+    environment: '$(productiveEnvironment)'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - template: kubernetes.yml@templates
+            parameters:
+              action: 'promote'
+- stage: RejectCanary
+  displayName: Reject canary
+  dependsOn: PromoteRejectCanary
+  condition: failed()
+  jobs:
+  - deployment: RejectCanary
+    displayName: Reject Canary
+    pool: 
+      vmImage: ubuntu-20.04
+    environment: '$(productiveEnvironment)'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - template: kubernetes.yml@templates
+            parameters:
+              action: 'reject'

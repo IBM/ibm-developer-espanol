@@ -1,0 +1,27 @@
+parameters:
+- name: 'action'
+  default: 'deploy'
+  type: string
+
+steps:
+- task: KubernetesManifest@0
+  inputs:
+    name: Create Secret Container Registry
+    action: 'createSecret'
+    kubernetesServiceConnection: $(ProductivekubernetesServiceConnection)
+    namespace: '$(openshiftProject)'
+    secretType: 'dockerRegistry'
+    secretName: '$(dockersecretname)'
+    dockerRegistryEndpoint: '$(dockerserviceconnection)'
+- task: KubernetesManifest@0
+  inputs:
+    name: Deploy of Manifest
+    action: ${{ parameters.action }}
+    kubernetesServiceConnection: $(ProductivekubernetesServiceConnection)
+    namespace: '$(openshiftProject)'
+    strategy: 'canary'
+    percentage: '25'
+    manifests: |
+      $(Pipeline.Workspace)/deployment.yml
+    containers: '$(containerRegistry)/$(icrrepository):$(tag)'
+    imagePullSecrets: '$(dockersecretname)'
