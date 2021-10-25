@@ -1,0 +1,12 @@
+{
+    "commands": [
+    {
+        "command": "show -json",
+
+        "command_name": "planshow",
+        "command_desc": "Showing state",
+        "command_onerror": "continue"
+    }],
+"operation_name": "Workspace Command",
+"description": "Executing command"
+}

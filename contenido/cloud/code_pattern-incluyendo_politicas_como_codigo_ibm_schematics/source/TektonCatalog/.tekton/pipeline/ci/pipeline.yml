@@ -1,0 +1,45 @@
+---
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: deploy-pipeline
+spec:
+  params:
+    - name: WORKSPACE_ID
+      description: workspace id
+    - name: pipeline-debug
+      default: "0"
+  workspaces:
+    - name: artifacts
+  tasks:
+    - name: update-workspace
+      taskRef:
+        name: update-workspace-task
+      workspaces:
+        - name: artifacts
+          workspace: artifacts
+      params:
+        - name: WORKSPACE_ID
+          value: $(params.WORKSPACE_ID)
+    - name: plan
+      runAfter:
+        - update-workspace
+      taskRef:
+        name: plan-task
+      workspaces:
+        - name: artifacts
+          workspace: artifacts
+      params:
+        - name: WORKSPACE_ID
+          value: $(params.WORKSPACE_ID)
+    - name: apply
+      runAfter: 
+        - plan
+      taskRef:
+        name: apply-task
+      workspaces:
+        - name: artifacts
+          workspace: artifacts
+      params:
+        - name: WORKSPACE_ID
+          value: $(params.WORKSPACE_ID)

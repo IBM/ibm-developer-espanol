@@ -1,0 +1,88 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: plan-compliance
+spec:
+  params:
+    - name: ibmcloud-apikey-secret-key
+      description: field in the secret that contains the api key used to login to ibmcloud
+      default: apikey
+    - name: continuous-delivery-context-secret
+      description: Reference name for the secret resource
+      default: "secure-properties"
+    - name: WORKSPACE_ID
+      description: the workspace id
+    - name: tf-var-file
+      description: comma separated list of terraform tfvar files
+    - name: policies-dir
+      description: "Policies directory"
+  workspaces:
+    - name: artifacts
+      mountPath: /artifacts
+  steps:
+    - name: terraform-plan
+      image: jonathanbc92/custom-base-image:latest
+      env:
+        - name: API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: $(params.continuous-delivery-context-secret)
+              key: $(params.ibmcloud-apikey-secret-key)
+              optional: true
+        - name: WORKSPACE_ID
+          value: $(params.WORKSPACE_ID)
+        - name: VAR_FILE
+          value: $(params.tf-var-file)
+        - name: POLICIES_DIR
+          value: $(params.policies-dir)
+      command: ["/bin/bash", "-c"]
+      args:
+        - |
+          #!/bin/bash
+          export IC_API_KEY=$API_KEY
+          echo "Workspace $WORKSPACE_ID"
+          REGION="--no-region"
+          # only parse the region if its the *NEW* workspace id format
+          if [[ "$WORKSPACE_ID" == *".workspace"* ]]; then
+              REGION=" -r $(echo $WORKSPACE_ID | cut -f1 -d.)"
+          fi
+          echo "REGION: $REGION"
+          # force login (required by schematics cli)
+          ibmcloud login --apikey $API_KEY -a "https://cloud.ibm.com" $REGION
+          # run terraform plan
+          echo "ibmcloud terraform workspace get --id $WORKSPACE_ID"
+          export DIRECTORY=$(ibmcloud terraform workspace get --id $WORKSPACE_ID --output JSON | jq '.template_data[0].folder' | tr -d '"')
+          export TEMPLATE_ID=$(ibmcloud terraform workspace get --id $WORKSPACE_ID --output JSON | jq '.template_data[0].id' | tr -d '"')
+          echo "DIRECTORY: $DIRECTORY"
+          echo "TEMPLATE_ID: $TEMPLATE_ID"
+          cd artifacts/$DIRECTORY
+          echo "Find directories"
+          echo "Pulling state"
+          echo "ibmcloud terraform state pull --id $WORKSPACE_ID --template $TEMPLATE_ID > tfstate"
+          ibmcloud terraform state pull --id $WORKSPACE_ID --template $TEMPLATE_ID > tfstate
+          
+          echo "Verifying tfvars"
+          echo "VAR_FILE: $VAR_FILE"
+          if [ "$VAR_FILE" != "" ]; then
+              fileARR=(${VAR_FILE//,/ }) # split the comma seperated list
+              for i in "${fileARR[@]}"; do
+                  VAR_CMD+=" -var-file="$i" "
+              done   
+          else
+              echo "INFO: tf-var file not provided"
+          fi
+          if [ "$POLICIES_DIR" != "" ]; then
+              VAR_DIR=" -p /artifacts/$POLICIES_DIR"
+          else
+              echo "INFO: policies-dir not provided"
+          fi
+          echo "Exporting Plan"
+          terraform init
+          echo "terraform plan -state=tfstate -out=tfplan $VAR_CMD"
+          terraform plan -state=tfstate -out=tfplan $VAR_CMD
+          echo "Generating JSON Plan"
+          terraform show -json ./tfplan > tfplan.json
+          echo "Validating Plan"
+          echo "conftest $VAR_DIR test tfplan.json"
+          conftest $VAR_DIR test tfplan.json
+

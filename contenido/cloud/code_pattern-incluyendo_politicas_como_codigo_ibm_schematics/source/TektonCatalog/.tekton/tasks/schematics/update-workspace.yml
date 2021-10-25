@@ -1,0 +1,83 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: update-workspace-task
+spec:
+  params:
+    - name: ibmcloud-apikey-secret-key
+      description: field in the secret that contains the api key used to login to ibmcloud
+      default: apikey
+    - name: continuous-delivery-context-secret
+      description: Reference name for the secret resource
+      default: "secure-properties"
+    - name: WORKSPACE_ID
+      description: the workspace id
+  workspaces:
+    - name: artifacts
+      mountPath: /artifacts
+  steps:
+    - name: update-workspace
+      image: ibmcom/pipeline-base-image:2.11
+      envFrom:
+        - configMapRef:
+            name: environment-properties
+        - secretRef:
+            name: secure-properties
+      env:
+        - name: API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: $(params.continuous-delivery-context-secret)
+              key: $(params.ibmcloud-apikey-secret-key)
+              optional: true
+        - name: WORKSPACE_ID
+          value: $(params.WORKSPACE_ID)
+      command: ["/bin/bash", "-c"]
+      args:
+        - |
+          #!/bin/bash
+          echo "Workspace $WORKSPACE_ID"
+          REGION="--no-region"
+          # only parse the region if its the *NEW* workspace id format
+          if [[ "$WORKSPACE_ID" == *".workspace"* ]]; then
+              REGION=" -r $(echo $WORKSPACE_ID | cut -f1 -d.)"
+          fi
+          echo "REGION: $REGION"
+          # force login (required by schematics cli)
+          ibmcloud login --apikey $API_KEY -a "https://cloud.ibm.com" $REGION
+          # get schematics workspace as json
+          WORKSPACE=$(ibmcloud terraform workspace get -i $WORKSPACE_ID --json)
+          echo "Updating Schematics workspace from environment variables..."
+          # iterate over ALL schematics worskpace variables to see if there is a matching env var
+          if jq -e . >/dev/null 2>&1 <<<"$WORKSPACE"; then
+              echo "$WORKSPACE" > "temp.json"
+          else
+              echo "$WORKSPACE" | head -n -1 > "temp.json"
+          fi
+          for KEY in $(cat temp.json | jq ".template_data[0].values_metadata[].name" -r); do
+              
+              # if the value exists as an env var, update the workspace
+              if [ -n "${!KEY}" ]; then
+                  echo "$KEY found with value '${!KEY}'"; 
+                  SEARCH=$(cat temp.json | jq ".template_data[0].variablestore[]?.name")
+                  echo "$SEARCH"
+                  
+                  if [[ "$SEARCH" =~ .*"$KEY".* ]]; then
+                      echo "It's there, update it."
+                      WORKSPACE=$(cat temp.json | jq -r \
+                          --arg updateKey "$KEY" \
+                          --arg updateVal "${!KEY}" \
+                          '.template_data[0].variablestore = [.template_data[0].variablestore[] | if (.name == $updateKey) then (.value = $updateVal) else . end]' )
+                  else 
+                      echo "It's NOT there, add it."
+                      WORKSPACE=$(cat temp.json| jq -r ".template_data[0].variablestore[.template_data[0].variablestore| length] |= . + { \"name\": \"$KEY\", \"value\": \"${!KEY}\", \"type\": \"string\" }")
+                      
+                  fi
+              fi
+          done
+          cp temp.json workspace.json
+          ibmcloud terraform workspace update --id $WORKSPACE_ID --file workspace.json
+          # cleanup
+          rm -f workspace.json
+          sleep 30
+          unset WORKSPACE

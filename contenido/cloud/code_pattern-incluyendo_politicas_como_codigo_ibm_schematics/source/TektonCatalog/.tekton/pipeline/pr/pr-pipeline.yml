@@ -1,0 +1,224 @@
+---
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: pr-pipeline
+spec:
+  params:
+    - name: repository
+      description: the git repo
+    - name: branch
+      description: branch
+    - name: revision
+      description: the git revision/commit for the git repo
+      default: ""
+    - name: target-branch
+      description: target branch
+    - name: commit-id
+      description: commit id
+    - name: commit-timestamp
+      description: commit timestamp
+    - name: pipeline-debug
+      description: toggles debug mode for the pipeline
+    - name: pr-url
+      description: pr url
+    - name: target-commit-id
+      description: target branch commit id
+    - name: project-id
+      description: project id
+      default: ""
+    - name: scm-type
+      description: source code type used (github, github-ent, gitlab)
+    - name: ibmcloud-api
+      description: the ibmcloud api
+      default: https://cloud.ibm.com
+    - name: tf-dir
+      description: the directory where the terraform main entry file is found
+      default: ""
+    - name: policy-config-json
+      description: Configure policies to control thresholds
+      default: ""
+    - name: tf-var-file
+      description: (optional) terraform var-file
+      default: ""
+    - name: WORKSPACE_ID
+      description: workspace id
+    - name: context
+      default: "Continuous Integration/Tekton"
+    - name: description
+      default: "Validado las politicas"
+    - name: policies-repository
+      description: "Policies repository URL"
+    - name: policies-dir
+      description: "Policies directory"
+  workspaces:
+    - name: artifacts
+  tasks:
+    - name: extract-repository-url
+      taskRef:
+        name: toolchain-extract-value
+      params:
+        - name: expression
+          # if a params.repository is given, it takes precedence
+          value: '. as $toolchain | ["$(params.repository)"] | if .[0]=="" then $toolchain | .services[] | select(.toolchain_binding.name=="repo") | .dashboard_url else .[0] end'
+        - name: pipeline-debug
+          value: $(params.pipeline-debug)
+    - name: extract-policies-repository-url
+      taskRef:
+        name: toolchain-extract-value
+      params:
+        - name: expression
+          # if a params.repository is given, it takes precedence
+          value: '. as $toolchain | ["$(params.policies-repository)"] | if .[0]=="" then $toolchain | .services[] | select(.toolchain_binding.name=="repo") | .dashboard_url else .[0] end'
+        - name: pipeline-debug
+          value: $(params.pipeline-debug)
+    # - name: set-git-commit-pending
+    #   taskRef:
+    #     name: git-set-commit-status
+    #   runAfter:
+    #     - extract-repository-url
+    #   workspaces:
+    #     - name: artifacts
+    #       workspace: artifacts
+    #   params:
+    #     - name: repository
+    #       value: $(params.repository)
+    #     - name: revision
+    #       value: $(params.commit-id)
+    #     - name: context
+    #       value: $(params.context)
+    #     - name: description
+    #       value: $(params.description)
+    #     - name: state
+    #       value: "pending"
+    #     - name: pipeline-debug
+    #       value: $(params.pipeline-debug)
+    - name: fetch-repo
+      taskRef:
+        name: git-clone-repo
+      runAfter:
+        - set-git-commit-pending
+      params:
+        - name: continuous-delivery-context-secret
+          value: "secure-properties"
+        - name: ibmcloud-apikey-secret-key
+          value: "apikey"
+        - name: repository
+          value: $(tasks.extract-repository-url.results.extracted-value)
+        - name: branch
+          value: $(params.branch)
+        - name: revision
+          value: $(params.revision)
+        - name: pipeline-debug
+          value: $(params.pipeline-debug)
+        - name: ibmcloud-api
+          value: $(params.ibmcloud-api)
+      workspaces:
+        - name: output
+          workspace: artifacts
+    - name: fetch-policies-repo
+      taskRef:
+        name: git-clone-repo
+      runAfter:
+        - fetch-repo
+      params:
+        - name: continuous-delivery-context-secret
+          value: "secure-properties"
+        - name: ibmcloud-apikey-secret-key
+          value: "apikey"
+        - name: repository
+          value: $(tasks.extract-policies-repository-url.results.extracted-value)
+        - name: branch
+          value: "master"
+        - name: pipeline-debug
+          value: $(params.pipeline-debug)
+        - name: ibmcloud-api
+          value: $(params.ibmcloud-api)
+        - name: directory-name
+          value: $(params.policies-dir)
+      workspaces:
+        - name: output
+          workspace: artifacts
+    # - name: set-git-commit-running
+    #   runAfter:
+    #     - fetch-policies-repo
+    #   taskRef:
+    #     name: git-set-commit-status
+    #   workspaces:
+    #     - name: artifacts
+    #       workspace: artifacts
+    #   params:
+    #     - name: repository
+    #       value: $(params.repository)
+    #     - name: revision
+    #       value: $(params.commit-id)
+    #     - name: context
+    #       value: $(params.context)
+    #     - name: description
+    #       value: $(params.description)
+    #     - name: state
+    #       value: "running"
+    #     - name: pipeline-debug
+    #       value: $(params.pipeline-debug)
+    - name: validate
+      runAfter:
+        - set-git-commit-running
+      taskRef:
+        name: plan-compliance
+      workspaces:
+        - name: artifacts
+          workspace: artifacts
+      params:
+        - name: WORKSPACE_ID
+          value: $(params.WORKSPACE_ID)
+        - name: policies-dir
+          value: $(params.policies-dir)
+        - name: tf-var-file
+          value: $(params.tf-var-file)
+  # finally:
+  # - name: github-set-failed
+  #   when:
+  #     - input: "$(tasks.status)"
+  #       operator: in
+  #       values: ["Failed"]
+  #   taskRef:
+  #       name: git-set-commit-status
+  #   workspaces:
+  #     - name: artifacts
+  #       workspace: artifacts
+  #   params:
+  #     - name: repository
+  #       value: $(params.repository)
+  #     - name: revision
+  #       value: $(params.commit-id)
+  #     - name: context
+  #       value: $(params.context)
+  #     - name: description
+  #       value: $(params.description)
+  #     - name: state
+  #       value: "failed"
+  #     - name: pipeline-debug
+  #       value: $(params.pipeline-debug)
+  # - name: github-set-passing
+  #   when:
+  #     - input: "$(tasks.status)"
+  #       operator: in
+  #       values: ["Succeeded","Completed"]
+  #   taskRef:
+  #       name: git-set-commit-status
+  #   workspaces:
+  #     - name: artifacts
+  #       workspace: artifacts
+  #   params:
+  #     - name: repository
+  #       value: $(params.repository)
+  #     - name: revision
+  #       value: $(params.commit-id)
+  #     - name: context
+  #       value: $(params.context)
+  #     - name: description
+  #       value: $(params.description)
+  #     - name: state
+  #       value: "success"
+  #     - name: pipeline-debug
+  #       value: $(params.pipeline-debug)

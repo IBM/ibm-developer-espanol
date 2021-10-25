@@ -1,0 +1,5 @@
+base_name = "rego"
+tags = ["Entorno:Desarrollo", "Owner:Rego","Proyecto:Rego"]
+plan = "lite"                                                     
+region = "us-south"
+resource_group = "default"
