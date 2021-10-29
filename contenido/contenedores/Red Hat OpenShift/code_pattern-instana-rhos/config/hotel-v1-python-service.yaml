@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: hotel-v1-python
+  labels:
+    app: hotel-v1-python
+spec:
+  ports:
+    - name: 9101-tcp
+      protocol: TCP
+      port: 9101
+      targetPort: 9101
+  selector:
+    app: hotel-v1-python
+    deploymentconfig: hotel-v1-python

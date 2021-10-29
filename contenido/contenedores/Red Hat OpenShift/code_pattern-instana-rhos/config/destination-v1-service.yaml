@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: destination-v1
+  labels:
+    app: destination-v1
+spec:
+  ports:
+    - name: 9001-tcp
+      protocol: TCP
+      port: 9001
+      targetPort: 9001
+  selector:
+    app: destination-v1
+    deploymentconfig: destination-v1

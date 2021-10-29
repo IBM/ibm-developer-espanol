@@ -12,7 +12,10 @@ Para más información recomendamos leer [este artículo introductorio](https://
 
 ## Índice
 
-- [En Construcción...](./carpeta_nueva)
+- [En Construcción...]()
+
+<!-- > FORMATO PARA AGREGAR UN NUEVO PATTERN AL ÍNDICE (COPIAR LINEA DE ABAJO) <-->
+<!-- > - [Título Completo Code Pattern](./nombre-carpeta-code-pattern/README.md) <-->
 
 ## Contribuciones
 

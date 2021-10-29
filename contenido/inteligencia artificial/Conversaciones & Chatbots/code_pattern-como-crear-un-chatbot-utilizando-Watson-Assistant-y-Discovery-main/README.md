@@ -1,4 +1,4 @@
-# Cómo crear un chatbot utilizando Watson Assistant y Discovery.
+# Cómo crear un chatbot utilizando Watson Assistant y Discovery
 
 # Introducción
 En este tutorial, demostraremos cómo podemos usar **Watson Assistant** con la ayuda de **Watson Discovery** para crear un Chatbot que pueda interactuar con usted acerca de las pólizas de seguro.

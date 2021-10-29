@@ -1,0 +1,66 @@
+kind: DeploymentConfig
+apiVersion: apps.openshift.io/v1
+metadata:
+  name: ui
+  labels:
+    app: ui
+    app.kubernetes.io/component: ui
+    app.kubernetes.io/instance: ui
+    app.kubernetes.io/part-of: bee-travels
+spec:
+  strategy:
+    type: Rolling
+    rollingParams:
+      updatePeriodSeconds: 1
+      intervalSeconds: 1
+      timeoutSeconds: 600
+      maxUnavailable: 25%
+      maxSurge: 25%
+    resources:
+      limits:
+        cpu: 200m
+        memory: 256Mi
+      requests:
+        cpu: 200m
+        memory: 256Mi
+    activeDeadlineSeconds: 21600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    app: ui
+    deploymentconfig: ui
+  template:
+    metadata:
+      labels:
+        app: ui
+        deploymentconfig: ui
+    spec:
+      containers:
+        - name: ui
+          image: ${DOCKERHUB_NAME}/ui:latest
+          ports:
+            - containerPort: 9000
+              protocol: TCP
+          env:
+            - name: CAR_URL
+              value: 'http://carrental-v1:9102'
+            - name: CURRENCY_EXCHANGE_URL
+              value: 'http://currencyexchange:9201'
+            - name: DESTINATION_URL
+              value: 'http://destination-v1:9001'
+            - name: HOTEL_URL
+              value: 'http://hotel-v1-python:9101'
+            - name: NODE_ENV
+              value: production
+            - name: PORT
+              value: '9000'
+          resources:
+            limits:
+              cpu: 200m
+              memory: 256Mi
+            requests:
+              cpu: 200m
+              memory: 256Mi
+          imagePullPolicy: Always
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30

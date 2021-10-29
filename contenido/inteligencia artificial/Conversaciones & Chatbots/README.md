@@ -10,7 +10,12 @@ Para más información recomendamos visitar [este artículo](https://www.ibm.com
 
 ## Índice
 
+- [Cómo crear un chatbot utilizando Watson Assistant y Discovery](./code_pattern-como-crear-un-chatbot-utilizando-Watson-Assistant-y-Discovery-main/README.md)
 - [Crea un Chatbot Inteligente en Discord usando APIs de Watson AI](./code_pattern-crea-un-chatbot-inteligente-en-discord/README.md)
+
+
+<!-- > FORMATO PARA AGREGAR UN NUEVO PATTERN AL ÍNDICE (COPIAR LINEA DE ABAJO) <-->
+<!-- > - [Título Completo Code Pattern](./nombre-carpeta-code-pattern/README.md) <-->
 
 ## Contribuciones
 

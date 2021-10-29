@@ -1,0 +1,74 @@
+kind: DeploymentConfig
+apiVersion: apps.openshift.io/v1
+metadata:
+  name: destination-v1
+  labels:
+    app: destination-v1
+    app.kubernetes.io/component: destination-v1
+    app.kubernetes.io/instance: destination-v1
+    app.kubernetes.io/part-of: bee-travels
+spec:
+  strategy:
+    type: Rolling
+    rollingParams:
+      updatePeriodSeconds: 1
+      intervalSeconds: 1
+      timeoutSeconds: 600
+      maxUnavailable: 25%
+      maxSurge: 25%
+    resources:
+      limits:
+        cpu: 200m
+        memory: 256Mi
+      requests:
+        cpu: 200m
+        memory: 256Mi
+    activeDeadlineSeconds: 21600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    app: destination-v1
+    deploymentconfig: destination-v1
+  template:
+    metadata:
+      labels:
+        app: destination-v1
+        deploymentconfig: destination-v1
+    spec:
+      containers:
+        - name: destination-v1
+          image: ${DOCKERHUB_NAME}/destination-v1:latest
+          ports:
+            - containerPort: 9001
+              protocol: TCP
+          env:
+            - name: HOST_IP
+              value: destination-v1
+            - name: LOG_LEVEL
+              value: info
+            - name: PORT
+              value: '9001'
+            - name: SCHEME
+              value: http
+            - name: INSTANA_AGENT_HOST
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.hostIP
+            - name: INSTANA_AGENT_PORT
+              value: '42699'
+            - name: INSTANA_SERVICE_NAME
+              value: destination-v1
+            - name: INSTANA_AUTOPROFILE
+              value: "true"
+            - name: INSTANA_LOG_LEVEL
+              value: "warn"
+          resources:
+            limits:
+              cpu: 200m
+              memory: 256Mi
+            requests:
+              cpu: 200m
+              memory: 256Mi
+          imagePullPolicy: Always
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30

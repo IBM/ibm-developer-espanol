@@ -1,4 +1,4 @@
-## Incluyendo políticas como código para validar su despliegue de IBM Schematics.
+## Incluyendo políticas como código para validar su despliegue de IBM Schematics
 ---
 En este code pattern preparará un pipeline para el despliegue de recursos en la nube, utilizando IBM Schematics, IBM Continuous Delivery (Tekton), IBM Toolchain y Rego.
 
