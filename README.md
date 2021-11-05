@@ -29,6 +29,10 @@ Todos estos contenidos han sido provistos por expertos de IBM, que estarán aqu�
   - [Procesamiento de Lenguaje Natural](contenido/inteligencia%20artificial/Procesamiento%20de%20Lenguaje%20Natural%20(NLP)/README.md)
   - [Reconocimiento de imágenes](contenido/inteligencia%20artificial/Reconocimiento%20de%20Imágenes/README.md)
 
+## Eventos
+
+- [23/11/2021 - Observabilidad empresarial con Instana (Parte I)](./eventos/joint-workshops/20211123%20-%20Observabilidad%20empresarial%20con%20Instana%20(Parte%20I)/README.md)
+
 ## Enlaces de Interés
 
 ¿Has quedado con ganas de más? ¡Genial! A continuación, te brindamos algunos canales y recursos que te serán de utilidad:
