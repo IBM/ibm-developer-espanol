@@ -32,6 +32,7 @@ Todos estos contenidos han sido provistos por expertos de IBM, que estarán aqu�
 ## Eventos
 
 - [23/11/2021 - Observabilidad empresarial con Instana (Parte I)](./eventos/joint-workshops/20211123%20-%20Observabilidad%20empresarial%20con%20Instana%20(Parte%20I)/README.md)
+- [30/11/2021 - Observabilidad empresarial con Turbonomic (Parte II)](./eventos/joint-workshops/20211130%20-%20Observabilidad%20empresarial%20con%20Turbonomic%20(Parte%20II)/README.md)
 
 ## Enlaces de Interés
 
