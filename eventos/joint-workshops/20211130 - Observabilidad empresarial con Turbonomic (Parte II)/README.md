@@ -41,6 +41,7 @@ En este webinar, los asistentes aprenderán sobre:
 - [Prerequisitos - Observabilidad empresarial con Instana (Parte I)](../20211123%20-%20Observabilidad%20empresarial%20con%20Instana%20(Parte%20I)/README.md)
 - [Tutorial: Mejore el rendimiento y la eficiencia en sus implementaciones de Red Hat OpenShift (Próximamente)]()
 - [Entorno de prueba: Red Hat OpenShift (duración: una hora)](https://learn.openshift.com/playgrounds/openshift45)
+- [Turbonomic Free Trial](https://marketplace.redhat.com/en-us/products/turbonomic-platform?_ga=2.229329884.1925654936.1619530033-739339010.1619530033)
 
 ### Lecturas Recomendadas
 
