@@ -40,15 +40,10 @@ En este webinar, los asistentes aprenderán sobre:
 - [Ve el Replay (Próximamente)]()
 - [Accede a las slides (Próximamente)]()
 
-### Prerequisitos
-
-- [Parte I - Observabilidad empresarial con Instana](../20211123%20-%20Observabilidad%20empresarial%20con%20Instana%20(Parte%20I)/README.md)
-- [Code Pattern: Integre Instana con una aplicación de microservicios en OpenShift](../../../contenido/contenedores/Red%20Hat%20OpenShift/code_pattern-instana-rhos/README.md)
-- [Aplicación Bee Travels](https://bee-travels.github.io/)
-
 ### ¡Hazlo tú mismo!
 
-- [Tutorial: Mejore el rendimiento y la eficiencia en sus implementaciones de Red Hat OpenShift](link_a_ibm_developer)
+- [Prerequisitos - Observabilidad empresarial con Instana (Parte I)](../20211123%20-%20Observabilidad%20empresarial%20con%20Instana%20(Parte%20I)/README.md)
+- [Tutorial: Mejore el rendimiento y la eficiencia en sus implementaciones de Red Hat OpenShift (Próximamente)]()
 - [OpenShift Demo (Sandbox de una hora)](https://learn.openshift.com/playgrounds/openshift45)
 
 ### Lecturas Recomendadas
