@@ -7,7 +7,7 @@ En esta sección podrás encontrar información sobre nuestros eventos de advoca
 ## Índice
 
 - [23/11/2021 - Observabilidad empresarial con Instana (Parte I)](./joint-workshops/20211123%20-%20Observabilidad%20empresarial%20con%20Instana%20(Parte%20I)/README.md)
-
+- [30/11/2021 - Observabilidad empresarial con Turbonomic (Parte II)](./joint-workshops/20211130%20-%20Observabilidad%20empresarial%20con%20Turbonomic%20(Parte%20II)/README.md)
 
 <!-- > FORMATO PARA AGREGAR UN NUEVO EVENTO AL ÍNDICE (COPIAR LINEA DE ABAJO) <-->
 <!-- > - [Título Completo del Evento](./YYYYMMDD - nombre-evento/README.md) <-->
