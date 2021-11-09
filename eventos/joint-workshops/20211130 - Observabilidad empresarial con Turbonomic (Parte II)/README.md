@@ -43,7 +43,7 @@ En este webinar, los asistentes aprenderán sobre:
 - [Entorno de prueba: Red Hat OpenShift (duración: una hora)](https://learn.openshift.com/playgrounds/openshift45)
 - [Turbonomic Free Trial](https://marketplace.redhat.com/en-us/products/turbonomic-platform?_ga=2.229329884.1925654936.1619530033-739339010.1619530033)
 
-### Lecturas Recomendadas
+### Lecturas Recomendadas1
 
 - [Curso - IBM Cloud Essentials Course](https://cognitiveclass.ai/courses/ibm-cloud-essentials)
 - [Digital Developer Conference - AIops & Integration](https://developer.ibm.com/conferences/digital-developer-conference-ai-automation-integration/)
