@@ -48,7 +48,7 @@ En este webinar los participantes aprenderán sobre:
 
 ### ¡Hazlo tú mismo!
 
-- [Code Pattern: Integre Instana con una aplicación de microservicios en OpenShift](../../../contenido/contenedores/Red%20Hat%20OpenShift/code_pattern-instana-rhos/README.md)
+- [Code Pattern: Integre Instana con una aplicación de microservicios en OpenShift](https://developer.ibm.com/es/patterns/integrating-instana-with-microservice-app-on-openshift/)
 - [Aplicación Bee Travels](https://bee-travels.github.io/)
 
 ### Lecturas Recomendadas
