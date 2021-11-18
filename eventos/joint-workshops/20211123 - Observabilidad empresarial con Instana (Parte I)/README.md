@@ -33,7 +33,7 @@ En este webinar los participantes aprenderán sobre:
   - ![LinkedIn Icon](../../../images/icon_linkedin_small.png) [/julia-leyton-2930732a](https://www.linkedin.com/in/julia-leyton-2930732a/)
 - Josefina R. Casanova - IBM Developer Advocate
   - ![LinkedIn Icon](../../../images/icon_linkedin_small.png) [/josefinarcasanova](https://www.linkedin.com/in/josefinarcasanova/)
-- Gabriela Retamosa - Build Ecosystem & Developer Advocacy 
+- Gabriela Retamosa - IBM Developer Relations LATAM
   - ![Twitter Icon](../../../images/icon_twitter_small.png) [@gabyret](https://twitter.com/gabyret)
   - ![LinkedIn Icon](../../../images/icon_linkedin_small.png) [/gabriela-retamosa-saint-martin](https://www.linkedin.com/in/gabriela-retamosa-saint-martin/)
 
@@ -49,7 +49,7 @@ En este webinar los participantes aprenderán sobre:
 
 ### ¡Hazlo tú mismo!
 
-- [Code Pattern: Integre Instana con una aplicación de microservicios en OpenShift](https://developer.ibm.com/es/patterns/integrating-instana-with-microservice-app-on-openshift/)
+- [Code Pattern: Integre Instana con una aplicación de microservicios en OpenShift](https://ibm.biz/instanaPattern/)
 - [Aplicación Bee Travels](https://bee-travels.github.io/)
 
 ### Lecturas Recomendadas
