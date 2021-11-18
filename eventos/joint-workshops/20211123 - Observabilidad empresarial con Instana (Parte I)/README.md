@@ -45,6 +45,7 @@ En este webinar los participantes aprenderán sobre:
 - [Ve el Replay (Próximamente)]()
 - [Accede a las slides (Próximamente)]()
 - [Free Trial de Instana](https://www.instana.com/trial/)
+- [Instana Robot Shop](https://github.com/instana/robot-shop)
 
 ### ¡Hazlo tú mismo!
 
