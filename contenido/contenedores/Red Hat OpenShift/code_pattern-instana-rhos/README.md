@@ -42,6 +42,10 @@ Generaremos tráfico a la aplicación usando [Puppeteer](https://developers.goog
 
 ## Pasos a seguir
 
+### 0. Haz Fork del repositorio
+
+Deberás descargar una copia local de este repositorio, sea clonándolo o realizando un `fork`.
+
 ### 1. Integrar Instana
 
 Una vez que tengan acceso a Instana, abran el panel de Instana. Presionen  `Add Website` e ingresen un nombre para su sitio web ej. `Bee Travels`
