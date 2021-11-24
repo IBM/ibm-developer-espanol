@@ -42,7 +42,7 @@ En este webinar los participantes aprenderán sobre:
 ### Sesión
 
 - [Regístrate en IBM Cloud](https://cloud.ibm.com/registration)
-- [Ve el Replay (Próximamente)]()
+- [Ve el Replay (Próximamente)](https://www.youtube.com/watch?v=ko9WA_Qb3uI)
 - [Accede a las slides (Próximamente)]()
 - [Free Trial de Instana](https://www.instana.com/trial/)
 - [Instana Robot Shop](https://github.com/instana/robot-shop)
