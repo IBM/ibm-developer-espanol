@@ -43,7 +43,6 @@ En este webinar los participantes aprenderán sobre:
 
 - [Regístrate en IBM Cloud](https://cloud.ibm.com/registration)
 - [Ve el Replay](https://www.youtube.com/watch?v=ko9WA_Qb3uI)
-- [Accede a las slides (Próximamente)]()
 - [Free Trial de Instana](https://www.instana.com/trial/)
 - [Instana Robot Shop](https://github.com/instana/robot-shop)
 
@@ -51,12 +50,16 @@ En este webinar los participantes aprenderán sobre:
 
 - [Code Pattern: Integre Instana con una aplicación de microservicios en OpenShift](https://ibm.biz/instanaPattern/)
 - [Aplicación Bee Travels](https://bee-travels.github.io/)
+- [Instalación de OpenShift CLI desde IBM Cloud](https://cloud.ibm.com/docs/openshift?topic=openshift-openshift-cli)
 
 ### Lecturas Recomendadas
 
 - [What Developers need to know about Observability](https://drive.google.com/file/d/1vIKUriKKzsIq25kVKs-b-IhRTdEFDhPR/view)
 - [IBM Observability by Instana](https://www.ibm.com/cloud/instana)
 - [Instana Docs](https://www.instana.com/docs/)
+- [Charla: Automatizando el ciclo de vida de aplicaciones con operadores](https://developer.ibm.com/es/conferences/build-smart-on-kubernetes-latam/session1-day2/)
+- [Charla: Desplegando Red Hat OpenShift en IBM Cloud](https://developer.ibm.com/es/conferences/build-smart-on-kubernetes-latam/session2-day1/)
+- [Artículo: Una breve introducción al mágico mundo de contenedores](https://developer.ibm.com/es/articles/una-breve-introduccion-al-magico-mundo-de-contenedores/)
 
 ### ¡Contáctanos!
 
