@@ -24,7 +24,7 @@ En este webinar, los asistentes aprenderán sobre:
 
 - Josefina R. Casanova - IBM Developer Advocate
   - ![LinkedIn Icon](../../../images/icon_linkedin_small.png) [/josefinarcasanova](https://www.linkedin.com/in/josefinarcasanova/)
-- Luis da Silva - Turboonomic Technoology Advocate
+- Luis da Silva - Turboonomic Technology Advocate
   - ![LinkedIn Icon](../../../images/icon_linkedin_small.png) [/ludas](https://www.linkedin.com/in/ludas/)  
 - Gabriela Retamosa - Build Ecosystem & Developer Advocacy 
   - ![Twitter Icon](../../../images/icon_twitter_small.png) [@gabyret](https://twitter.com/gabyret)
@@ -41,7 +41,7 @@ En este webinar, los asistentes aprenderán sobre:
 
 ### ¡Hazlo tú mismo!
 
-- [Prerequisitos - Observabilidad empresarial con Instana](../20211123%20-%20Observabilidad%20empresarial%20con%20Instana%20(Parte%20I)/README.md)
+- [Prerequisito: Observabilidad empresarial con Instana](../20211123%20-%20Observabilidad%20empresarial%20con%20Instana%20(Parte%20I)/README.md)
 - [Tutorial: Mejore el rendimiento y la eficiencia en sus implementaciones de Red Hat OpenShift](https://developer.ibm.com/es/tutorials/improve-performance-efficiency-openshift-deployments-turbonomic-instana/)
 - [Entorno de prueba: Red Hat OpenShift (duración: una hora)](https://learn.openshift.com/playgrounds/openshift45)
 - [Turbonomic Free Trial](https://marketplace.redhat.com/en-us/products/turbonomic-platform?_ga=2.229329884.1925654936.1619530033-739339010.1619530033)
