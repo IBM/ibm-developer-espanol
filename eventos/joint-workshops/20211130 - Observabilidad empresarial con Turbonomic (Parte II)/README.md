@@ -24,6 +24,8 @@ En este webinar, los asistentes aprenderán sobre:
 
 - Josefina R. Casanova - IBM Developer Advocate
   - ![LinkedIn Icon](../../../images/icon_linkedin_small.png) [/josefinarcasanova](https://www.linkedin.com/in/josefinarcasanova/)
+- Luis da Silva - Turboonomic Technoology Advocate
+  - ![LinkedIn Icon](../../../images/icon_linkedin_small.png) [/ludas](https://www.linkedin.com/in/ludas/)  
 - Gabriela Retamosa - Build Ecosystem & Developer Advocacy 
   - ![Twitter Icon](../../../images/icon_twitter_small.png) [@gabyret](https://twitter.com/gabyret)
   - ![LinkedIn Icon](../../../images/icon_linkedin_small.png) [/gabriela-retamosa-saint-martin](https://www.linkedin.com/in/gabriela-retamosa-saint-martin/)
@@ -32,9 +34,10 @@ En este webinar, los asistentes aprenderán sobre:
 
 ### Sesión
 
-- [Regístrate en IBM Cloud](https://cloud.ibm.com/registration)
+- [Regístrate en IBM Cloud](https://ibm.biz/BdfA3W)
 - [Ve el Replay (Próximamente)]()
-- [Accede a las slides (Próximamente)]()
+- [¿Te gustó el contenido? ¡Suscríbete a nuestro Newsletter!](https://developer.ibm.com/newsletters/)
+- [¿Qué te pareció? ¡Danos Feedback!](https://ibm.biz/BdfATc)
 
 ### ¡Hazlo tú mismo!
 
