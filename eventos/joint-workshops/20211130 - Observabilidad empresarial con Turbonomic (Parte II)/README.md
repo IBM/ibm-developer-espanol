@@ -35,7 +35,7 @@ En este webinar, los asistentes aprenderán sobre:
 ### Sesión
 
 - [Regístrate en IBM Cloud](https://ibm.biz/BdfA3W)
-- [Ve el Replay (Próximamente)]()
+- [Ve el Replay](https://youtu.be/q5L4xKiYjlg)
 - [¿Te gustó el contenido? ¡Suscríbete a nuestro Newsletter!](https://developer.ibm.com/newsletters/)
 - [¿Qué te pareció? ¡Danos Feedback!](https://ibm.biz/BdfATc)
 
@@ -49,7 +49,7 @@ En este webinar, los asistentes aprenderán sobre:
 ### Lecturas Recomendadas
 
 - [Curso - IBM Cloud Essentials Course](https://cognitiveclass.ai/courses/ibm-cloud-essentials)
-- [Digital Developer Conference - AIops & Integration](https://developer.ibm.com/conferences/digital-developer-conference-ai-automation-integration/)
+- [Digital Developer Conference - AIOps & Integration](https://developer.ibm.com/conferences/digital-developer-conference-ai-automation-integration/)
 - [Turbonomic Documentation](https://docs.turbonomic.com/)
 
 ### ¡Contáctanos!
