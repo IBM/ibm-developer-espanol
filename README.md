@@ -51,8 +51,6 @@ Todos estos contenidos han sido provistos por expertos de IBM, que estar√°n aqu√
 - ``Gabriela Retamosa``
   - ![Twitter Icon](images/icon_twitter_small.png) [@gabyret](https://twitter.com/gabyret)
   - ![LinkedIn Icon](images/icon_linkedin_small.png) [/gabriela-retamosa-saint-martin](https://www.linkedin.com/in/gabriela-retamosa-saint-martin/)
-- ``Bruno Vicario``
-  - ![LinkedIn Icon](images/icon_linkedin_small.png) [/bruno-vicario-823517211](https://www.linkedin.com/in/bruno-vicario-823517211/)
 - ``Josefina R. Casanova``
   - ![LinkedIn Icon](images/icon_linkedin_small.png) [/josefinarcasanova](https://www.linkedin.com/in/josefinarcasanova/)
 
