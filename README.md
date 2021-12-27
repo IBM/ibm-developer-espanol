@@ -12,22 +12,18 @@ Todos estos contenidos han sido provistos por expertos de IBM, que estarán aqu�
 
 ## Contenidos
 
-- [**Bases de datos**](contenido/bases%20de%20datos/README.md)
-  - Coming Soon!
 - **Ciencia de Datos**
   - [Análisis de Datos](contenido/ciencia%20de%20datos/análisis%20de%20datos/README.md)
+- [**Cloud Computing**](contenido/cloud/README.md)
 - **Contenedores**
   - [Kubernetes](contenido/contenedores/Kubernetes/README.md)
   - [Red Hat OpenShift](contenido/contenedores/Red%20Hat%20OpenShift/README.md)
-- [**Desarrollo Web**](contenido/desarollo%20web/README.md)
-  - Coming Soong!
-- [**Desarrollo Mobile**](contenido/desarollo%20mobile/README.md)
-  - Coming Soong!
 - **Inteligencia Artificial**
   - [Conversaciones & Chatbots](contenido/inteligencia%20artificial/Conversaciones%20&%20Chatbots/README.md)
   - [Machine Learning](contenido/inteligencia%20artificial/Machine%20Learning/README.md)
   - [Procesamiento de Lenguaje Natural](contenido/inteligencia%20artificial/Procesamiento%20de%20Lenguaje%20Natural%20(NLP)/README.md)
   - [Reconocimiento de imágenes](contenido/inteligencia%20artificial/Reconocimiento%20de%20Imágenes/README.md)
+- [**Microservicios**](contenido/microservicios/README.md)
 
 ## Eventos
 
